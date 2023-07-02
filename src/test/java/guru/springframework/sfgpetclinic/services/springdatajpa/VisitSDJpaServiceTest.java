@@ -5,6 +5,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
+import static org.mockito.Mockito.doThrow;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -17,6 +18,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import guru.springframework.sfgpetclinic.model.Visit;
+import guru.springframework.sfgpetclinic.repositories.SpecialtyRepository;
 import guru.springframework.sfgpetclinic.repositories.VisitRepository;
 
 @ExtendWith(MockitoExtension.class)
@@ -83,5 +85,4 @@ class VisitSDJpaServiceTest {
 		//then
 		then(visitRepository).should().deleteById(anyLong());
 	}
-
 }
